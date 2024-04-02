@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    font-size:  62.5% ; /*Define o tamanho da fonte no arquivo html todo*/
+    scroll-behavior: smooth; /*Faz a pagina rolar devagar quando clica no menu*/
+}
+
+body {
+    font-family: "Open Sans", sans-serif;  /*Define a fonte no Body*/
+    font-size: 2rem; /*Texto com 20px*/
+    color: var(--primary-color); /*Coloca a cor no corpo todo*/
+    line-height: 1.5;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;  /*Define as fontes dos Hedding de H1 a H6 */
+}
+
+h1 {
+    font-size: 6rem;  /*Texto com 60px*/
+    text-transform: uppercase;  /*Texto em caixa alta*/
+
+}
+
+h2 {
+    font-size: 4rem; /*Tamanho da fonte de 80px*/
+    margin-bottom: 5rem; /*Tamanho da margem de 50px*/
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 5rem;  /*Texto com 50px*/
+
+}
+
+h4 {
+    font-size: 4.5rem;  /*Texto com 45px*/
+
+}
+
+h5 {
+    font-size: 4rem;  /*Texto com 40px*/
+
+}
+
+h6 {
+    font-size: 1.5rem;  /*Texto com 35px*/
+
+}
+
+a{
+    text-decoration: none; /*Retira a decoração do texto*/
+}
+
+p{
+    margin-bottom: 3rem;
+}
+
+table{
+    min-width: 360px;
+    width: 100%; /*Coloca a tabela com 100% de largura da tela*/
+    border-collapse: collapse; /*Elimina o espaço entre as bordas da tabela*/
+
+}
+
+table td, table th {
+    white-space: nowrap; /*Para não quebrar o texto dentro da tabela*/
+    padding: 1rem;
+    text-align: left; /*Alinha o texto a esquerda*/
+    border: 0.1rem solid var(--light-gray-color) /*Coloca uma borda e uma sombra na tabela*/
+
+}
+
+tfoot td, table th {
+    background-color: var(--light-gray-color);
+}
+
+table caption{
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,300 @@
+
+
+.intro-content {
+    position: relative; /*Deixa relativo para poder sobir o texto*/
+    top: -2rem; /*Sobe o texto 8px*/
+    display: grid; /* Usa grid para crias colunas e linhas*/
+    grid-template-columns: 2fr 1fr; /*Coloca um fragmento pra cada coluna da tela*/
+    gap: var(--gap); /*Coloca o tamanho de acordo com a variavel*/
+    min-height: 100vh; /*Coloca a grid com o tamanho total do viewport*/
+}
+
+.contact-content {
+    position: relative; /*Deixa relativo para poder sobir o texto*/
+    /* top: -2rem; Sobe o texto 8px */
+    display: grid; /* Usa grid para crias colunas e linhas*/
+    grid-template-columns: 1fr 1.5fr; /*Coloca um fragmento pra cada coluna da tela*/
+    gap: var(--gap); /*Coloca o tamanho de acordo com a variavel*/
+    min-height: 100vh; /*Coloca a grid com o tamanho total do viewport*/
+}
+
+.name, .intro-img-personal{
+    display: flex;
+    flex-flow: column wrap; /* alinha as colunas*/
+    justify-content: center; /*Justifica o conteudo ao centro*/
+}
+
+.intro-text-content, .intro-img {
+    display: flex; /*Usando display flex dentro do gap*/
+    flex-flow: column wrap; /* alinha as colunas*/
+    justify-content: center; /*Justifica o conteudo ao centro*/
+}
+
+
+.intro-text-content p {
+    font-size: 1.6rem; /*Tamanho da fonte de 16px*/
+}
+
+.intro-text-content h2 {
+    font-size: 2rem; /*Tamanho da fonte de 100px*/
+}
+
+.name h1{
+    font-size: 4rem; /*Tamanho da fonte de 80px*/
+    margin-bottom: 1rem; /*Tamanho da margem de 50px*/
+    margin-top: 8rem;
+    text-transform: uppercase;
+}
+.name h3{
+    font-size: 2rem; /*Tamanho da fonte de 80px*/
+    margin-bottom: 1rem; /*Tamanho da margem de 50px*/
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.intro-img-personal img {
+    margin-top: 5rem;
+    max-width: 100%; 
+    height: auto;
+}
+
+.intro-img img {      /*Configuraçoes a imagem altura e lagura etc...*/
+    max-width: 100%; 
+    height: auto;
+}
+
+.top3-content{
+    max-width: 64rem;
+    display: flex; /*Coloca o display flex*/
+    flex-direction: column; /*Transforma em colunas*/
+    flex-wrap: nowrap; /*nao permite que o texto se quebre*/
+    justify-content: center; /*Justifica tudo ao centro*/
+    min-height: 100vh;
+    text-align: center;
+}
+
+.grid-one-content{
+    display: flex; /*Coloca o display flex*/
+    flex-flow: column wrap; /*Coloca como colunas*/
+    justify-content: center; /*Justifica tudo ao centro*/
+    min-height: 100vh;
+}
+
+.grid-titulo-1 {
+    margin-bottom: 1rem;
+}
+
+.grid-texto-1 {
+    padding-bottom: 5rem;
+}
+
+.grid {
+    display: grid; /*Cria uma grid*/
+    grid-template-columns: repeat(3, 1fr); /*Coloca 3 columas com espaçamentos iguais*/
+    gap: var(--gap);
+    counter-reset: grid-counter; /*Cria um contador de acordo com a variavel*/
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative; /*Faz com que os itens fiquem dentro do h3 posicionados me relaçã a ele h3*/
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+.grid h3::before { /*coloca um pseudo elemento - Before antes do titulo after depois*/
+    counter-increment: grid-counter; /*Incrementa o contador*/
+    content: counter(grid-counter); /*Coloca o valor do contador para aparecer*/
+    position:absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
+
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover { /*Quando passar o mouse*/
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg); /*Transforma em x e y e aumenta a escala com o scale e rotaciona com o rotate*/
+}
+
+.reponsive-table {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.contact-form{
+    grid-column: span 2; /*Coloca a grid com duas columas*/
+}
+
+.contact-form .form-grid {
+    border: none; /*Remove as bordas*/
+    display: flex; /*Coloca como display flex*/
+    flex-direction: row; /*Determina o eixo pricipal as linhas*/
+    flex-wrap: wrap; /**/
+    gap: var(--gap); /*Coloca uma distância de 3rem*/
+}
+
+.form-grid legend{
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem ;
+}
+
+.form-group {
+    flex: 1 1 32rem;
+}
+
+.form-group label {
+    display: block; /*Os labels viram um bloco e usam toda a linha*/
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea  {
+    border: none;
+    background-color: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 2rem;
+    outline: none; /*Retira a sombra que envolve o input*/
+}
+
+.form-group input:focus, .form-group textarea:focus  { /*Coloca uma sombra no input quando selecionado*/
+    box-shadow: 0 0 1rem 0.2rem var(--secondary-color);
+}
+
+.form-group button {
+    border: 0.5rem solid var(--white-color); /*Coloca a borda*/
+    background: none; /*Retira o background*/
+    color: var(--white-color); /*Coloca a cor*/
+    padding: 1.5rem; /*Padding de 15px*/
+    font-size: 2rem; /*fonte de 20px*/
+    cursor: pointer; /*Deixa o cursor como apontador*/
+    transition: all 300ms ease-in-out; /*Coloca um efeito de trasição*/
+}
+
+.form-group button:hover { /* Quando o mause passar pelo botão*/
+    background: var(--white-color); /*Fundo cor branca*/
+    color: var(--primary-color); /*Coloca a cor principál*/
+}
+
+.form-group::placeholder{
+    color: var(--light-gray-color);
+}
+
+.footer{
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer a {
+    color: var(--primary-color); /*Coloca a cor principál*/
+}
+.footer p {
+    margin: 0;
+    padding: 3rem;
+}
+
+.heart {
+    color: var(--secondary-color); 
+}
+
+.close-menu {
+   display: none; /*Retira o display do input chabox*/
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /*Deixa redondo*/
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
+}
+
+
+@media (max-width: 800px) {
+
+        .intro-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .grid {
+        grid-template-columns: 1fr;
+        }
+
+        .gallery-img{
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .gallery-img img {
+            width: 100%;
+        }
+
+        .menu {
+            bottom: 0;
+            text-align: center;
+        }
+
+        .menu-content, .menu-content ul {
+            flex-direction: column; /*Coloca em uma coluna*/
+            justify-content: center; /*Justifica ao centro*/
+        }
+
+        .menu-content {
+            height: 100vh; /*Coloca com 100% da viewport*/
+        }
+
+        .menu{
+            display: none; /*Não aparece o menu*/
+ 
+        }
+
+        .close-menu-label::after{
+            content: '☰';
+            position: fixed;
+            z-index: 2;
+            top: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            color: var(--white-color);
+            font-size: 3rem;
+            line-height: 3rem;
+            width: 3rem;
+            height: 3rem;
+            text-align: center;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .close-menu:checked~.menu { /*Quando o input tiver marcado o menu vira display block*/
+            display: block;
+        }
+
+        .close-menu:checked~.close-menu-label::after { /*Quando o input tiver desmarcado o menu vira display block com x*/
+            display: block;
+            content: '×';
+        }
+
+        .menu-spacing {
+            display: none; /*Quando chegar na medida de 800px o espaço do menu é zero.*/
+        }
+}

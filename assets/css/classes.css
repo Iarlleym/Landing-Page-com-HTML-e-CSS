@@ -1,0 +1,30 @@
+.main-bg { /* Cria uma classe para uso em qualquer lugar do codigo*/
+    background-image: url(../img/Main-bg.svg);  /*Coloca uma imagem em SVG de fundo*/
+    background-size: cover;  
+    background-position: center center; /*Faz a imgem do fundo se ajustar de acordo com a janela do navegador*/
+    color: var(--white-color);
+}
+
+.white-bg{ /* Cria uma classe para uso em qualquer lugar do codigo*/
+    background-color: var(--white-color); /*Coloca a cor de fundo da classe*/
+    color: var(--primary-color);
+}
+
+.main-content { /* Cria uma classe para uso em qualquer lugar do codigo*/
+    max-width: 120rem; /*Lagura máxima do item*/
+    margin: 0 auto; /* sem margem em cima e em baixo e automatico nas laterais*/
+    padding: 6rem var(--gap); /*Coloca um padding de 30px de acordo com a variavel --gap*/
+}
+
+.section { /* Cria uma classe para uso em qualquer lugar do codigo*/
+    min-height: 100vh; /*Configura a altura minina da section em 100% da viewport */
+}
+
+.menu-spacing {
+    height: 6.5rem; /*foi utilizado para empurra a section para baixo*/
+}
+
+body .full-width { /*Colocou o body só pra aumentar a especificidade da classe*/
+    width: 100%; /*100% da largura*/
+    flex: 1 1 100%; /*Mexe do display flex de quem tem essa classe e coloca como 100%*/
+}

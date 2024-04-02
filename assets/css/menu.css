@@ -1,0 +1,58 @@
+.menu {
+    position: fixed; /*Deixa o menu fixado no site*/
+    z-index: 1;
+    top: 0; /*Zera o topo*/
+    left: 0; /*Zera a esquerda*/
+    right: 0; /*Zera o direita*/
+    width: 100%; /*coloca com 100% da lagura da janela*/
+    border-bottom: 0.1rem solid var(--light-gray-color); /*Coloca 1px de Cor na parte de baixo da tag*/
+}
+
+.menu-content{
+    display: flex;  /*Coloca o Menu como display flex*/
+    justify-content: space-between; /*Coloca um espaçamento entre os itens*/
+    align-items: center; /*Alinha os itens no centro da tag*/
+    padding-top: 0;  /*Retira o padding do topo*/
+    padding-bottom: 0 ; /*Retira o padding de baixo*/
+}
+
+.menu  h1{
+    font-size: 2.3rem; /*Coloca um tamanho de 23px*/
+    color: var(--primary-color);
+}
+
+.menu h1 a{
+    color: inherit; /*Herda a cor do elemento pai*/
+}
+
+.menu ul{
+    list-style: none;
+    display: flex; /*Coloca oa itens do menu como display flex*/
+}
+.menu ul li a{
+    display: block; /*Coloca os a como bloco para ajustar a distancia entre eles*/
+    padding: 2rem; /*Coloca um Padding de 20px*/
+    font-size: 1.5rem; /*ooloca um padding de 20px de todos os lados*/
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: var(--primary-color); /*oloca a cor primaria do site*/
+}
+
+.menu ul li a::after { /*esse after é um pseudo elemento para colocar a barrinha vermelha no menu*/
+
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0; /*0% da lagura para não aparecer*/
+    height: 0.2rem; /*2px de altura*/
+    background: var(--secondary-color); /*Cor da barrinha*/
+    transition: all 300ms ease-in-out; /* Tipo de trasição e tempo quando passar o mouse*/
+}
+
+.menu ul li a:hover::after { /*quando passar o maouse a barinha vermelha aparece*/
+
+    width: 50%; /*50% de largura da barrinha*/
+    left: 25%;
+
+}

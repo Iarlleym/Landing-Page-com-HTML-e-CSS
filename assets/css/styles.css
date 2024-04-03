@@ -232,14 +232,15 @@
 
 @media (max-width: 800px) {
 
-        .contact-content{
-            grid-template-columns: 1fr;
-        }
-
         .intro-content {
             grid-template-columns: 1fr;
             text-align: center;
         }
+
+        .contact-content{
+            grid-template-columns: 1fr;  /*Aki era pra deixar com uma linha mas não esta funciomando*/
+        }
+
 
         .grid {
         grid-template-columns: 1fr;

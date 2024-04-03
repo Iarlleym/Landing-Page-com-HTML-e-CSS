@@ -28,7 +28,6 @@
     display: flex; /*Usando display flex dentro do gap*/
     flex-flow: column wrap; /* alinha as colunas*/
     justify-content: center; /*Justifica o conteudo ao centro*/
-    text-align: center;
 }
 
 

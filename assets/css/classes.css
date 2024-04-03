@@ -1,5 +1,5 @@
 .main-bg { /* Cria uma classe para uso em qualquer lugar do codigo*/
-    background-image: url(../img/Main-bg.svg);  /*Coloca uma imagem em SVG de fundo*/
+    background-image: url(../img/Main-bg-all-black.svg);  /*Coloca uma imagem em SVG de fundo*/
     background-size: cover;  
     background-position: center center; /*Faz a imgem do fundo se ajustar de acordo com a janela do navegador*/
     color: var(--white-color);

@@ -13,7 +13,7 @@
     position: relative; /*Deixa relativo para poder sobir o texto*/
     /* top: -2rem; Sobe o texto 8px */
     display: grid; /* Usa grid para crias colunas e linhas*/
-    grid-template-columns: 1fr 1.5fr; /*Coloca um fragmento pra cada coluna da tela*/
+    grid-template-columns: 1fr 1.5fr ;/*Coloca um fragmento pra cada coluna da tela*/
     gap: var(--gap); /*Coloca o tamanho de acordo com a variavel*/
     min-height: 100vh; /*Coloca a grid com o tamanho total do viewport*/
 }
@@ -28,6 +28,7 @@
     display: flex; /*Usando display flex dentro do gap*/
     flex-flow: column wrap; /* alinha as colunas*/
     justify-content: center; /*Justifica o conteudo ao centro*/
+    text-align: center;
 }
 
 
@@ -63,6 +64,7 @@
     height: auto;
 }
 
+
 .top3-content{
     max-width: 64rem;
     display: flex; /*Coloca o display flex*/
@@ -81,7 +83,7 @@
 }
 
 .grid-titulo-1 {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
 .grid-texto-1 {
@@ -96,7 +98,7 @@
 }
 
 .grid h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     position: relative; /*Faz com que os itens fiquem dentro do h3 posicionados me relaçã a ele h3*/
     padding-left: 5rem;
     padding-bottom: 2rem;
@@ -201,7 +203,7 @@
 }
 .footer p {
     margin: 0;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .heart {
@@ -230,6 +232,10 @@
 
 
 @media (max-width: 800px) {
+
+        .contact-content{
+            grid-template-columns: 1fr;
+        }
 
         .intro-content {
             grid-template-columns: 1fr;
@@ -266,7 +272,6 @@
 
         .menu{
             display: none; /*Não aparece o menu*/
- 
         }
 
         .close-menu-label::after{

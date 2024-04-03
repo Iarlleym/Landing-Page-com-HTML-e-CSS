@@ -302,4 +302,16 @@
         .menu-spacing {
             display: none; /*Quando chegar na medida de 800px o espaço do menu é zero.*/
         }
+
+        h1 {
+            font-size: 4rem;  /*Texto com 60px*/
+            text-transform: uppercase;  /*Texto em caixa alta*/
+        
+        }
+        
+        h2 {
+            font-size: 2rem; /*Tamanho da fonte de 80px*/
+            margin-bottom: 3rem; /*Tamanho da margem de 50px*/
+            text-transform: uppercase;
+        }
 }
